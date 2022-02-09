@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 registerRoutes([], function () {
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    Route::get('', [\App\Http\Controllers\AppController::class, 'index'])
+        ->name('app.welcome');
 });

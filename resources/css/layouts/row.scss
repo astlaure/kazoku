@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.container .row {
+  margin-left: -#{$size-4};
+  margin-right: -#{$size-4};
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  .col {
+    width: 100%;
+    padding: 0 $size-4;
+
+    &.small-6 {
+      width: calc(100% / 12 * 6);
+    }
+
+    &.medium-6 {
+      @include screen-medium {
+        width: calc(100% / 12 * 6);
+      }
+    }
+
+    &.large-6 {
+      @include screen-large {
+        width: calc(100% / 12 * 6);
+      }
+    }
+  }
+}

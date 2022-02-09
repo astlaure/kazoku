@@ -1,0 +1,13 @@
+@use "variables" as *;
+
+@mixin screen-medium {
+    @media all and (min-width: $breakpoint-medium) {
+        @content;
+    }
+}
+
+@mixin screen-large {
+    @media all and (min-width: $breakpoint-large) {
+        @content;
+    }
+}
