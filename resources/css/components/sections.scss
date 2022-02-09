@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as *;
+
+section {
+    margin: $size-8 0;
+
+    &.centered {
+        text-align: center;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as *;
+
+.footer {
+    margin-top: 4rem;
+    min-height: 4rem;
+    padding: 2rem 0;
+    border-top: thin solid #d6d6d6;
+
+    .col {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-container {
+        height: 50%;
+        width: 100%;
+
+        .logo-link {
+            height: 100%;
+            display: block;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    .info-container {
+        width: 100%;
+    }
+
+    .contact-container {
+        width: 100%;
+    }
+
+    .personal-info {
+        .section-label {
+            font-size: $text-md;
+        }
+
+        p {
+            font-size: $text-sm;
+        }
+    }
+
+    .footer-copyright {
+        margin-top: 2rem;
+        font-size: $text-sm;
+        text-align: center;
+    }
+}
