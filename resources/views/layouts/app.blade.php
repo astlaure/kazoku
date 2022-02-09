@@ -14,6 +14,9 @@
 </head>
 <body class="@yield('body')">
 
+<x-topbar />
+<x-navbar />
+
 @yield('content')
 
 </body>

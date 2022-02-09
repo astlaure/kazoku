@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as *;
+
+.icons {
+    width: 24px;
+    fill: $color-primary;
+}
+
+.icon-facebook {
+    &:hover {
+        fill: blue;
+    }
+}

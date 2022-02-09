@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as *;
+
+.navbar {
+    padding: 0.5rem 0;
+
+    > .container {
+        display: flex;
+    }
+
+    .navbar-brand {
+        img {
+            height: 100%;
+        }
+    }
+
+    .navbar-menus {
+        display: flex;
+        align-items: center;
+        flex: 1;
+
+        .navbar-menu {
+            display: flex;
+            align-items: center;
+
+            &.right-menu {
+                margin-left: auto;
+            }
+
+            .navbar-menu-item {
+                margin: 0 0.5rem;
+                text-transform: uppercase;
+                font-size: 1.25rem;
+                font-weight: 500;
+                color: $color-primary;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.topbar {
+    padding: 0.5rem 0;
+
+    & > .container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .topbar-socials {
+        display: flex;
+    }
+
+    .topbar-socials-link {
+        margin: 0 0.5rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
