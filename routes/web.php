@@ -16,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 registerRoutes([], function () {
     Route::get('', [\App\Http\Controllers\AppController::class, 'index'])
         ->name('app.welcome');
+    Route::get('about', [\App\Http\Controllers\AppController::class, 'about'])
+        ->name('app.about');
 });

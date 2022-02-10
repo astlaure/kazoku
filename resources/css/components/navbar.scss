@@ -1,29 +1,88 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .navbar {
+    height: 5rem;
     padding: 0.5rem 0;
 
     > .container {
+        height: 100%;
         display: flex;
+        position: relative;
     }
 
     .navbar-brand {
+        width: 100%;
+        display: flex;
+
+        @include screen-medium() {
+            width: auto;
+        }
+
+        a {
+            height: 100%;
+            display: block;
+        }
         img {
             height: 100%;
+            width: auto;
+        }
+    }
+
+    .navbar-burger {
+        margin-left: auto;
+        border: none;
+
+        @include screen-medium() {
+            display: none;
         }
     }
 
     .navbar-menus {
+        height: 0;
         display: flex;
         align-items: center;
         flex: 1;
+        overflow: hidden;
+
+        z-index: 100;
+        background: white;
+        width: 100%;
+        left: 0;
+        position: absolute;
+        top: 100%;
+
+        @include screen-medium() {
+            height: auto;
+            position: initial;
+            background: transparent;
+            width: auto;
+            border: none;
+        }
+
+        &.visible {
+            height: auto;
+            border: thin solid #e5e5e5;
+        }
 
         .navbar-menu {
             display: flex;
             align-items: center;
 
+            flex-direction: column;
+            width: 100%;
+
+            @include screen-medium() {
+                flex-direction: row;
+                width: auto;
+            }
+
             &.right-menu {
-                margin-left: auto;
+                margin-left: 0;
+
+                @include screen-medium() {
+                    margin-left: auto;
+                }
             }
 
             .navbar-menu-item {
@@ -33,12 +92,14 @@
                 font-weight: 500;
                 color: $color-primary;
 
-                &:first-child {
-                    margin-left: 0;
-                }
+                @include screen-medium() {
+                    &:first-child {
+                        margin-left: 0;
+                    }
 
-                &:last-child {
-                    margin-right: 0;
+                    &:last-child {
+                        margin-right: 0;
+                    }
                 }
             }
         }
